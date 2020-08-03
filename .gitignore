@@ -1,0 +1,7 @@
+/plant_triplet_net.egg-info
+.vscode/
+/garbage/
+/example_experiment/results
+/example_experiment/images
+.DS_Store*
+__pycache__*

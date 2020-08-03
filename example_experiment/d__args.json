@@ -1,0 +1,6 @@
+{ 
+    "features_file":"./results/image_features.csv",
+    "clustering_model_file": "./results/clustering_model.pkl",
+    "output_file": "./results/clusters.csv",
+    "log_output_file":"./results/experiment.log"
+}

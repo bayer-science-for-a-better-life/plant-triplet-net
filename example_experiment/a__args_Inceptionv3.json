@@ -1,0 +1,34 @@
+{ 
+    "experiment_file":"./experiment.csv",
+    "output_file": "./results/feature_extraction_model.pkl",
+    "device": "cpu",
+    "dataloader_info": 
+        {
+        "time_points": [0, 1, 2, 4, 6],
+        "batch_size":32,
+        "crash_incomplete_time_courses":false
+        },
+    "architecture":
+        {
+        "raw_feature_extractor":"RawFeatureExtractorInceptionv3",
+        "ranker": [ 1024, 512 ],
+        "dropout": 0.2,
+        "image_size": 299,
+        "embedding_size": 32
+        },
+    "train_params":
+        {
+        "Nepochs":{
+            "step_1":10,
+            "step_2":10},
+        "ranking_gap": 1,
+        "distance_type": "euc",
+        "optimizer_type": "Adam",
+        "weight_decay": 1e-5,
+        "learning_rate":{
+            "step_1":1e-3,
+            "step_2":1e-4
+            }
+        },
+    "log_output_file":"./results/experiment.log"
+}

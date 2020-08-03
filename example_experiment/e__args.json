@@ -1,0 +1,15 @@
+{   "feature_extraction_model_file":"./results/feature_extraction_model.pkl",
+    "features_file": "./results/image_features.csv",
+    "clustering_model_file": "./results/clustering_model.pkl",
+    "cluster_results_file": "./results/clusters.csv",
+    "cluster_plot_params":
+        {
+        "selected_clusters": [0,1,3],
+        "time_points":[0,2,4,6],
+        "min_confidence": 0.7,
+        "N_per_cluster": 10,
+        "top_samples": 1
+        },
+     "output_dir":"./results/plots/",
+     "log_output_file": "./results/experiment.log"
+}

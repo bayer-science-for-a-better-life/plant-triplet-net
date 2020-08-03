@@ -1,0 +1,13 @@
+{ 
+    "image_paths_file":"./experiment.csv",
+    "feature_extraction_model":"./results/feature_extraction_model.pkl",
+    "output_file": "./results/image_features.csv",
+    "device": "cpu",
+    "dataloader_info": 
+        {
+        "time_points": [0, 1, 2, 4, 6],
+        "batch_size":50,
+        "crash_incomplete_time_courses":false
+        },
+    "log_output_file":"./results/experiment.log"
+}

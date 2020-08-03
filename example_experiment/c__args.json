@@ -1,0 +1,13 @@
+{ 
+    "features_file":"./results/image_features.csv",
+    "output_file":"./results/clustering_model.pkl",
+    "kmeans":{
+        "Nclusters":20,
+        "Ninit": 100,    
+        "percent_ctrl_downsample":0.05
+    },
+    "tvn":{
+        "epsilon_ratio": 0.01
+    },
+    "log_output_file":"./results/experiment.log"
+}
