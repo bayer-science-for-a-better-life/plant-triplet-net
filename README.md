@@ -10,6 +10,5 @@ Self-supervised feature extraction from plant image time series using triplets n
 <pre>conda activate plant_triplet_net</pre>
 - Go inside the plant_triplet_net folder and install the python package
 <pre>pip install -e .</pre>
-- Example to run the code with the respective arguments
-<pre>cd  example_experiment
-./experiment.sh </pre>
+- Example to run the code with the respective arguments is provided in 
+<pre>example_experiment/experiment.sh </pre>
