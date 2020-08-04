@@ -14,13 +14,13 @@
         "ranker": [ 1024, 512 ],
         "dropout": 0.2,
         "image_size": 224,
-        "embedding_size": 16
+        "embedding_size": 32
         },
     "train_params":
         {
         "Nepochs":{
-            "step_1":1,
-            "step_2":1},
+            "step_1":10,
+            "step_2":10},
         "ranking_gap": 1,
         "distance_type": "euc",
         "optimizer_type": "Adam",

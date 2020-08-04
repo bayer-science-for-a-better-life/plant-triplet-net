@@ -1,7 +1,7 @@
 { 
     "experiment_file":"./experiment.csv",
     "output_file": "./results/feature_extraction_model.pkl",
-    "device": "cpu",
+    "device": "cuda:0",
     "dataloader_info": 
         {
         "time_points": [0, 1, 2, 4, 6],
