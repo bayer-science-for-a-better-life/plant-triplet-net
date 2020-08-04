@@ -36,7 +36,7 @@ def main( experiment_file, dataloader_info, architecture, train_params, device, 
     model.to(device)
     logging.info(model)
 
-    # step 1: transfer learning module with frozen parameters
+    # step 1: raw feature extraction module with frozen parameters
     logging.info('\n\nStep 1. Training ranking module alone (transfer learning frozen):\n')        
     model.raw_feature_extractor.freezeParams()
     if train_params['Nepochs']['step_1']>0:
@@ -46,7 +46,7 @@ def main( experiment_file, dataloader_info, architecture, train_params, device, 
         model.trainableParametersSummary()
         model, loss_hist_1 = train.trainModel( model, dataloaders, train_params_1)
 
-    # step 2: transfer learning module with trainable parameters
+    # step 2: raw feature extraction module with trainable parameters
     if train_params['Nepochs']['step_2']>0:
         logging.info('\n\nStep 2. Training ranker and transfer learning modules:\n')
         train_params_2 = train_params.copy()
@@ -64,7 +64,7 @@ def main( experiment_file, dataloader_info, architecture, train_params, device, 
     elif train_params['Nepochs']['step_2']>0:
         loss_hist = loss_hist_2
     
-    # Save model together with all the training info and history. We could also add user and date
+    # Save model together with all the training info and history
     utils.saveFeatureExtractionModel(model,architecture,train_params,loss_hist,dataloader_info,output_file)
     
     t_elapsed = (time.time() - start_time)/60
